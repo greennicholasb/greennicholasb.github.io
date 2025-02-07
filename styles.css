@@ -1,15 +1,15 @@
 body {
-	background: rgb(250, 0, 0);
+	background: rgb(255, 255, 255);
 	font-family:"Times New Roman", Times, serif;
-    margin: 40px;
+    margin: 30px;
 }
 h1 {
-	color: rgb(26, 136, 226);
+	color: rgb(0, 0, 0);
     font-family:"Times New Roman", Times, serif;
 	text-align: center;
 }
 .about {
-    background: red;   
+    background: rgb(255, 94, 0);   
     font-family:"Times New Roman", Times, serif;
 }
 
