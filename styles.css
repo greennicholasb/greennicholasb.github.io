@@ -37,7 +37,15 @@ p {
     background: rgb(255, 94, 0);
     font-family:"Times New Roman", Times, serif;
   }
-  
+  .projects {   display:flex; flex-wrap:wrap;  }  /* condensed to save space */
+.project {
+    width: 30%;
+    margin: 10px;
+    padding: 20px 10px;
+    background: white;  /* pick a color */
+    border-radius: 25%;
+}
+
 
 
   
