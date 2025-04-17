@@ -1,51 +1,79 @@
-body {
-	background: rgb(255, 255, 255);
-	font-family:"Times New Roman", Times, serif;
-    margin: 30px;
-}
-h1 {
-	color: rgb(0, 0, 0);
-    font-family:"Times New Roman", Times, serif;
-	text-align: center;
-}
-.about {
-    background: rgb(255, 94, 0);   
-    font-family:"Times New Roman", Times, serif;
-}
-.skills{
-    background: rgb(255, 94, 0);
-    font-family:"Times New Roman", Times, serif;
-}
-.projects{
-    background: rgb(255, 94, 0);
-    font-family:"Times New Roman", Times, serif;    
-}
-.contact{
-    background: rgb(255, 94, 0);
-    font-family:"Times New Roman", Times, serif;
-}
-p { 
-    background: rgb(255, 94, 0);
-    font-family:"Times New Roman", Times, serif;
+/*  Nicholas Green — portfolio site  */
+:root {
+    --accent: #ff5e00;
+    --text-on-accent: #fff;
+    --card-bg: #ffffff;
   }
-#para1 {
-    background: rgb(255, 94, 0);
-    font-family:"Times New Roman", Times, serif;
-
-  }
-.center {
-    background: rgb(255, 94, 0);
-    font-family:"Times New Roman", Times, serif;
-  }
-  .projects {   display:flex; flex-wrap:wrap;  }  /* condensed to save space */
-.project {
-    width: 30%;
-    margin: 10px;
-    padding: 20px 10px;
-    background: white;  /* pick a color */
-    border-radius: 25%;
-}
-
-
-
   
+  * { box-sizing: border-box; }
+  
+  body {
+    margin: 30px;
+    font-family: "Times New Roman", Times, serif;
+    background: #fff;
+    color: #000;
+  }
+  
+  /* Headings */
+  h1 { text-align: center; }
+  
+  /* Accent utility */
+  .accent {
+    background: var(--accent);
+    color: var(--text-on-accent);
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.25rem;
+  }
+  
+  /* Skills & contact lists */
+  ul.skills,
+  ul.contact {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+  }
+  
+  ul.skills li,
+  ul.contact li {
+    background: var(--accent);
+    color: var(--text-on-accent);
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.25rem;
+    font-size: 0.95rem;
+  }
+  
+  /* Projects grid */
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: var(--accent);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: var(--text-on-accent);
+  }
+  
+  .project {
+    background: var(--card-bg);
+    color: #000;
+    width: clamp(260px, 30%, 350px);
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+  
+  .project img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+  }
+  
+  .project h3 { margin: 0.5rem 0 0.25rem; }
+  
+  @media (max-width: 600px) {
+    .project { width: 100%; }
+  }
